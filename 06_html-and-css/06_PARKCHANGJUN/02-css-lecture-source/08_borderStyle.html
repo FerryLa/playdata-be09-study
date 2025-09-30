@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테두리 스타일</title>
+    <!-- top(사각형 위), right(사각형 오른쪽), bottom(사각형 아래), left(사각형 왼쪽) -->
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            /* 주석은 개별방법, border는 한번에 적용할때 방법 */
+            /* background-color: cadetblue;
+            border-top: 3px dashed red;
+            border-right: 3px solid green;
+            border-bottom: 3px dotted yellow;
+            border-left: 3px double blue; */
+            border: 1px solid black;
+        }        
+
+        .item {
+            margin: 30px 0;
+            width: 200px;
+            height: 200px;
+            background-color: royalblue;
+            /* 순서 : leftTop, rightTop, rightBottom, leftBottom */
+            /* border-radius: 10px 20px 30px 40px; */
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>테두리 스타일</h1>
+
+    <div class="box"></div>
+    <div class="item"></div>
+</body>
+</html>

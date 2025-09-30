@@ -1,0 +1,21 @@
+version: 2.1
+
+jobs:
+  notify:
+    machine:
+      image: ubuntu-2204:current
+    steps:
+      - checkout
+      - run:
+          name: Confirm Push and Display Message
+          command: |
+            echo "📦 변경 사항이 푸시되었습니다. Ansible을 로컬에서 실행하세요."
+            curl -H "Content-Type: application/json" \
+              -X POST \
+              -d '{"content": "📦 GitHub에 코드가 푸시되었습니다. 로컬에서 Ansible을 실행하세요."}' \
+              $DISCORD_WEBHOOK_URL
+
+workflows:
+  deploy-on-push:
+    jobs:
+      - notify

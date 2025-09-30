@@ -1,0 +1,21 @@
+---
+- name: Deploy Spring Boot REST API
+  hosts: web
+  become: yes
+  tasks:
+    - name: Install OpenJDK 17
+      apt:
+        name: openjdk-17-jre
+        state: present
+        update_cache: yes
+
+    - name: Copy application jar to target server
+      copy:
+        src: files/circle-0.0.1-SNAPSHOT.jar
+        dest: /home/vagrant/circle-0.0.1-SNAPSHOT.jar
+        mode: "0755"
+
+    - name: Run Spring Boot app
+      shell: nohup java -jar /home/vagrant/circle-0.0.1-SNAPSHOT.jar > /home/vagrant/app.log 2>&1 &
+      args:
+        chdir: /home/vagrant/

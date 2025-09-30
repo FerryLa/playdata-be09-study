@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>헤더-메인-푸터 레이아웃</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      header,
+      footer {
+        background-color: #333;
+        color: white;
+        justify-content: space-between;
+        padding: 20px;
+        display: flex;
+      }
+      .main {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        height: calc(100vh - 120px);
+      }
+      aside {
+        background: gainsboro;
+        padding: 20px;
+      }
+      section {
+        background: rgba(255, 255, 255, 0.833);
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>로고</div>
+      <div>메뉴</div>
+    </header>
+
+    <div class="main">
+      <aside>사이드바</aside>
+      <section>메인 콘텐츠</section>
+    </div>
+
+    <footer>
+      <div>Copyright</div>
+      <div>연락처</div>
+    </footer>
+  </body>
+</html>

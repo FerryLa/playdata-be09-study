@@ -1,0 +1,28 @@
+
+.test1 {
+    background: yellow;
+    color: black;
+}
+
+
+div {
+    width: 300px;
+    height: 300px;
+    background: darkviolet;
+}
+
+div {
+    width: 300px;
+    height: 300px;
+    background: red;
+}
+
+#test2 {
+    background : plum;
+    color: aquamarine;
+}
+
+.test2 {
+    background: blue !important;
+    color :  wheat !important;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[실습문제 6] 레이아웃 스타일 실습</title>
+    <style>
+      div {
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+        padding: 20px;
+        margin: 10px;
+        font-weight: bold;
+        float: left;
+        text-align: center;
+        font-size: 24px;
+      }
+      #box1 {
+        background-color: red;
+      }
+      #box2 {
+        background-color: blue;
+      }
+      #box3 {
+        background-color: green;
+      }
+      .clear {
+        clear: both;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box1">Box 1</div>
+    <div class="box" id="box2">Box 2</div>
+    <div class="box" id="box3">Box 3</div>
+    <h3 class="clear">float 적용 안 받는 글</h3>
+  </body>
+</html>

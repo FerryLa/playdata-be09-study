@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃1</title>
+    <style>
+        .size-test {border: 2px solid red;}
+
+        #test1 {width: 800px; height: 200px;}
+        #test2 {width: 80%; height: 200px;}
+
+        .block {
+            width: 150px;
+            height: 130px;
+            border: 1px solid black;
+            color: white;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+        .area1 {background: red;}
+        .area2 {background: orange;}
+        .area3 {background: yellowgreen;}
+        .area4 {background: green}
+        .area5 {background: blue;}
+
+        .block-test1 {
+            display: inline; /* width와 height속성적용 x, 가로로 배치된다. (padding 크기는 적용된다.) */
+        }
+
+        .block-test2 {
+            display: inline-block;
+            margin-left: -6px; /* 줄일 수 없어 보이는 간격은 -margin으로 어느정도 커버는 가능하다. */
+        }
+
+        .block-test3 {
+            display: block;
+            /* display속성을 none으로 하면 태그는 존재하지만 공간(영역)을 차지 하지 않는다. */
+            /* display: none;  */
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>레이아웃 스타일</h1>
+    <h3>width와 height</h3>
+    <p>내용이< 차지하고 있는 영역의 크기를 조절할 수 있는 속성</p>
+    <h4>고정크기</h4>
+    <div id="test1" class="size-test"></div>
+    <h4>가변크기</h4>
+    <div id="test2" class="size-test"></div>
+    <hr>
+    <h3>화면 배치 방법 변경</h3>
+    <p>블럭요소와 인라인요소의 속성을 변경하여 배치방식을 변경할 수 잇다.</p>
+    <h4>블럭 요소를 인라인요소로 변경</h4>
+    <pre><b>>>>> display: inline테스트</b></pre>
+    <pre>인라인요소로 변경되면 width와 height속성이 무시된다.</pre>
+    <div class="block block-test1 area1"></div>
+    <div class="block block-test1 area2"></div>
+    <div class="block block-test1 area3"></div>
+    <div class="block block-test1 area4"></div>
+    <div class="block block-test1 area5"></div>
+
+    <h4>블럭요소를 인라인블럭요소로 변경</h4>
+    <pre><b>>>>> display: inline-block 테스트</b></pre>
+    <pre>영역은 인라인요소로 변경되지만 내용은 블럭요소가 되어 width와 height속성을 설정할 수 있다.(요소간에 작은 간격이 존재)</pre>
+    <div class="block block-test2 area1"></div>
+    <div class="block block-test2 area2"></div>
+    <div class="block block-test2 area3"></div>
+    <div class="block block-test2 area4"></div>
+    <div class="block block-test2 area5"></div>
+
+    <h4>인라인 요소를 블럭 요소로 변경</h4>
+    <pre><b>>>>> display: block 테스트</b></pre>
+    <pre>인라인 요소를 블럭 요소로 변경하면 width와 height값을 지정할 수 있고 세로로 쌓인다.</pre>
+    <span class="block block-test3 area1"></span>
+    <span class="block block-test3 area2"></span>
+    <span class="block block-test3 area3"></span>
+    <span class="block block-test3 area4"></span>
+    <span class="block block-test3 area5"></span>
+    <p>나야 나</p>
+</body>
+</html>

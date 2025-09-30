@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5_이미지 관련 태그</title>
+    <style> body {background-color: beige;}</style>
+</head>
+<body>
+    <!-- 
+    # 이미지 관련 태그 요약
+
+    - <img/>: 이미지 삽입 태그
+    - src: 이미지 경로
+    - alt: 이미지 설명 (이미지가 안 보일 때 표시)
+    - width, height: 크기 조절
+
+    - 지원 확장자:
+    - GIF: 아이콘, 움직이는 이미지, 투명 배경
+    - JPG/JPEG: 사진용, 반복 저장 시 화질 저하
+    - PNG: 배경 투명 가능, 요즘 가장 많이 사용
+
+    - <map><area>: 이미지 내 특정 영역에 링크 설정
+    - <img usemap="#이름"> 로 연결
+    - <area shape="" coords="" href="" target=""> 로 영역 지정
+    -->
+    <h1>이미지 관련 태그</h1>
+    <img src="sample/image/city1.PNG" alt="city1 image" width="300px"><br>
+    <img src="sample/image/flower1.PNG" alt="flower1 image" width="300px"><br>
+    <img src="sample/image/forest1.PNG" alt="forest1 image" width="300px">
+    <h4>고정 크기 단위: 화면 사이즈가 줄어도 크기가 변하지 않는다</h4>
+    <img src="sample/image/flower1.PNG" alt="" width="15%" height="15%">
+    <img src="sample/image/flower2.PNG" alt="" width="15%" height="15%">
+    <img src="sample/image/flower3.PNG" alt="" width="15%" height="15%">
+    <img src="sample/image/flower4.PNG" alt="" width="15%" height="15%">
+    <img src="sample/image/flower5.PNG" alt="" width="15%" height="15%">
+
+    <!-- img[src="sample/image/flower$.PNG" width="200px" height="150px"]*5 -->
+
+    <hr>
+    
+    <h4>이미지 구역을 2개로 나누어 각각 링크 설정</h4>
+<!-- 이미지를 삽입하고, 이미지 맵(map)을 연결함 -->
+<img src="sample/image/river2.PNG" alt="river2" width="600px" height="500px" usemap="#map"> 
+<!-- usemap="#map" : 아래에 정의된 <map name="map">을 참조 -->
+
+<!-- 이미지 맵 정의 시작 -->
+<map name="map">
+
+<!-- 첫 번째 영역: (0,0)부터 (300,100)까지의 직사각형 클릭 시 playdata.io로 이동, 현재 탭에서 열림 -->
+<area shape="rect" coords="0,0,300,100" href="https://www.playdata.io" target="_self">
+<!-- target="_self"는 현재 프레임 또는 탭에서 링크 열기 -->
+
+<!-- 두 번째 영역: (310,0)부터 (590,100)까지의 직사각형 클릭 시 naver.com으로 이동, 새 탭에서 열림 -->
+<area shape="rect" coords="310,0,590,100" href="https://www.naver.com" target="_blank">
+<!-- target="_blank"는 새 탭에서 링크 열기 -->
+
+<!-- 세 번째 영역: (0,110)부터 (300,210)까지의 직사각형 클릭 시 playdata.io로 이동, 최상위 프레임에서 열림 -->
+<area shape="rect" coords="0,110,300,210" href="https://www.playdata.io" target="_top">
+<!-- target="_top"은 전체 창(최상위 프레임)에서 링크 열기 -->
+
+<!-- 네 번째 영역: (310,110)부터 (590,210)까지의 직사각형 클릭 시 playdata.io로 이동, 부모 프레임에서 열림 -->
+<area shape="rect" coords="310,110,590,210" href="https://www.playdata.io" target="_parent">
+<!-- target="_parent"는 현재 프레임의 부모 창에서 링크 열기 -->
+
+</map>
+<!-- 이미지 맵 정의 끝 -->
+<img src="sample/image/tower1.PNG" alt="타워" width="600px" height="300px">
+<p>멋진 타워 사진이다</p>
+<figure>
+    <img src="sample/image/tower1.PNG" alt="타워" width="600px" height="300px">
+    <figcaption>멋진 타워 사진이다.</figcaption>
+</figure> <!--한쌍 처럼 만들어줌-->
+
+
+
+</body>
+</html>

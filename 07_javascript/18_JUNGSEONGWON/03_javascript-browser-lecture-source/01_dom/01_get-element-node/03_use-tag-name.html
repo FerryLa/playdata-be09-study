@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="list">
+      <li class="drink">커피</li>
+      <li class="drink">콜라</li>
+      <li class="food">김치찌개</li>
+      <li class="food">된장찌개</li>
+    </ul>
+    <script>
+      // Document.prototype.getElementsByTagName
+      // DOM 전체에서 li 태그를 모두 탐색하여 반환
+      const $lists = document.getElementsByTagName("li");
+      console.log($lists); // HTMLColleciton - 유사 객체 배열, 이터러블
+      console.log($lists.length); // length를 가지고 있다.
+      // 기본 반복문을 통한 배경색 변경 처리
+      let changeColor = 0;
+      for (let i = 0; i < $lists.length; i++) {
+        $lists[i].style.backgroundColor = "rgb(130,220," + changeColor + ")";
+        changeColor += 50;
+      }
+      // HTMLCollection 객체를 배열로 변환하여 순회하며 color 프로퍼티 값을 변경한다.
+      Array.from($lists).forEach((list) => (list.style.color = "blue"));
+      // Element.prototype.getelementsByTagName
+      // $drink의 자손 노드 중에서 li 태그 탐색
+      const $drink = document.getElementById("drink");
+      const $listsFromDrink = $drink.getElementsByTagName("li");
+      console.log($listsFromDrink);
+
+      // test.forEach((list) => (list.style.color = "red"));
+      // $list.forEach((list) => (list.style.color = "red")); 
+      // 방법 1.
+      Array.from($lists).forEach((list) => (list.style.color = "pink"));
+      // 방법 2.
+      [...$lists].forEach((list) => (list.style.color = "hotpink"));
+
+      const $noElem = document.getElementsByName("a")
+      console.log($noElem);
+    </script>
+  </body>
+</html>

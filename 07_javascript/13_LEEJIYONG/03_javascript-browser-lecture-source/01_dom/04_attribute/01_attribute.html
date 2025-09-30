@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="username">유저명</label>
+    <input type="text" id="username" value="user01" />
+
+    <script>
+      const attributes = document.getElementById("username").attributes;
+      // NodeNameMap 객체 반환
+      console.log(attributes);
+      // 어트리뷰트 값 취득
+      console.log(attributes.type.value);
+      console.log(attributes.id.value);
+      console.log(attributes.value.value);
+
+      const $input = document.getElementById("username");
+      // value 어트리뷰트 값 취득
+      const inputValue = $input.getAttribute("value");
+      console.log(inputValue);
+      // value 어트리뷰트 값 변경
+      $input.setAttribute("value", "user02");
+    </script>
+
+    <p>
+      Element.prototype.getAttribute/setAttribute 메서드를 사용하면 attributes
+      프로퍼티를 통하지 않고 요소 노드에서 메서드를 통해 직접 HTML 어트리뷰트
+      값을 취득하거나 변경할 수 있어 편리 하다.
+    </p>
+
+    <script>
+      $input.setAttribute("test", "test");
+      console.log($input.hasAttribute("type"));
+      console.log($input.hasAttribute("name"));
+      console.log($input.hasAttribute("test"));
+
+      if ($input.hasAttribute("test")) $input.removeAttribute("test");
+
+      console.log($input.attributes);
+    </script>
+  </body>
+</html>

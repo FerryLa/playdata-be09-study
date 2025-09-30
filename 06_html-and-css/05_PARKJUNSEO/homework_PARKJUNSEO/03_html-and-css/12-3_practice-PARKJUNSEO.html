@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[실습문제 3] 텍스트 스타일 실습</title>
+    <style>
+      a {
+        color: blue;
+        text-decoration: none;
+      }
+
+      .em {
+        font-style: italic;
+      }
+      .u {
+        text-decoration: underline;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2,
+      h3 {
+        font-family: "궁서체";
+      }
+      .box {
+        background-color: rgb(206, 205, 205);
+        border: 1px solid rgb(105, 105, 105);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>이것은 헤더입니다.</h1>
+    <p>
+      이것은 단락입니다. 이 단락에서는 <span class="em">이탤릭체</span>와
+      <span class="u">밑줄</span>을 사용합니다. 링크는 <a href="#">여기</a>를
+      클릭하세요.
+    </p>
+    <div class="box">
+      <h2>이것은 박스 제목입니다.</h2>
+      <p>
+        이것은 박스 내용입니다. 이 단락에서도 <span class="em">이탤릭체</span>와
+        <span class="u">밑줄</span>을 사용합니다.
+      </p>
+    </div>
+
+    <h3>이것은 소제목입니다.</h3>
+    <p>이것은 다른 단락입니다.</p>
+  </body>
+</html>

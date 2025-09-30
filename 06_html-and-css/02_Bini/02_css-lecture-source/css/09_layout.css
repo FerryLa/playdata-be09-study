@@ -1,0 +1,77 @@
+.size-test {border: 2px solid red;}
+
+#test1 {width: 800px; height: 200px;}
+
+#test2 {width: 100%; height: 200px;}
+
+.block {
+    width: 150px;
+    height: 130px;
+    border: 1px solid black;
+    color: white;
+    padding: 200px 200px 100px 100px;
+}
+
+.area1 {background: #2189ff;}
+.area2 {background: #cccccc;}
+.area3 {background: #d1d1d1;}
+.area4 {background: #b1b1b1;}
+.area5 {background: #2189ff;}
+
+.block-test1 {display:inline} /*width 와 height 속성 적용 X, 가로로 배치가 됨 (단 padding 크기는 적용됨)*/
+
+.block-test2 {
+    display: inline-block;
+    margin-left: -6px;
+}
+
+.block-test3 {
+    /* display: block;
+    display: none; display속성을 none으로 하면 태그는 존재하지만 공간을 차지하지 않음 */
+    visibility: hidden;
+}
+
+.test {
+    background: yellow;
+    width: 100px;
+    height: 100px;
+    
+}
+
+.test1 {padding: 100px;}
+
+.test2 {padding-top: 50px; padding-left: 100px;}
+
+.test3 {margin: 50px;}
+
+.test4 {margin: 50px 0 0 50px;}
+
+.outer {
+    border:1px solid red;
+    position: relative; /*안쪽 div들을 감싸는 바깥쪽 div에 적용할 속성으로 상대적 원점을 의미*/
+}
+.first {
+    width: 300px; height: 300px; background: yellow; position: absolute;
+}
+.second {
+    width: 200px; height: 200px; background: yellowgreen; position: absolute; top: 50px; left: 50px;
+}
+/* 부모에 prosition: relative와 자신의 positio:absolute만 있으면 웹 브라우저의 절대 위치가 아니라 부모의 원점에 대한 상대 위치를 의미 */
+.third {
+    width: 100px; height: 100px; background: red ; position: absolute; top: 100px; left: 100px;
+}
+
+.wrap {position: relative; top: 200px;}
+.z-test {width: 150px; height: 100px; border: 1px solid black;}
+.z-test1 {background: yellow; position: absolute; top: 100px; left 100px; z-index: 3;}
+.z-test2 {background: blue; position: absolute; top: 50px; left 50px; z-index: 2;}
+.z-test3 {background: red; position: absolute; z-index: 1;}
+
+.float-test {
+    border:1px solid black;
+    width: 100px;
+    height: 50px;
+    float: left;
+    
+}
+

@@ -1,0 +1,18 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+    border-top: 3px dashed;
+    border-right: 3px solid;
+    border-bottom: 3px dotted yellow;
+    border-left: 3px double blue;
+    border-radius: 30px;
+}
+
+.item {
+    margin: 30px;
+    background-color: royalblue;
+    width: 200px; height: 200px;
+    border-radius: 10px 20px 30px 40px                                                                ;
+
+}

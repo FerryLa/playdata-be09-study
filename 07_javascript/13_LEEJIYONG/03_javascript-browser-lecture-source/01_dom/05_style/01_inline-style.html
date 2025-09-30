@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>inline style</h1>
+    <div style="color: white">DIV AREA</div>
+    <script>
+      const $area = document.querySelector("div");
+      console.log($area.style);
+      console.log($area.style.color);
+
+      $area.style.width = "100px";
+      $area.style.height = "100px";
+      $area.style.backgroundColor = "lightgray";
+      $area.style["background-color"] = "red";
+      $area.innerHTML = "<s>DIV AREA</s>";
+    </script>
+  </body>
+</html>

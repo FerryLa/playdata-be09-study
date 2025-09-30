@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼 관련 태그 실습</title>
+</head>
+<body>
+  <h1>폼 관련 태그 실습</h1>
+  <hr>
+  <form action="#">
+    <fieldset>
+    <legend>필수 입력 사항</legend>
+    <table>
+    <label>ID</label> <input type="text" value="아이디 10글자 이네"> <button>중복 확인</button><br>
+    <label>비밀번호</label><input type="text" value="영문,숫자,특수문자 포함 8자 이상"><br>
+    <label>비밀번호 확인</label> <input type="text"> <br>
+    <label>Email</label> <input type="text">
+    <select name="nation"> 
+    <option value="@naver.com">직접 입력</option> <br>
+  </table>
+  </fieldset>
+  <hr>
+    <fieldset>
+      <legend>추가 정보</legend>
+      <table>
+      <label> 프로필 사진 </label>
+      <input type="file" name="uploadfile" multiple><br><br>
+      <label>성별 : </label>
+      <input type="radio" id="male" name="gender"  value="M" checked>
+        <label for="male">남자</label>
+        <input type="radio" id="female" name="gender" value="F">
+        <label for="female">여자</label><br><br>
+        <label>생년월일: </label><input type="date" name="date"><br><br>
+        <label>취미:</label><br>
+        <input type="checkbox" name="hobby" id="baseball" value="야구">
+        <label for="baseball">야구</label>
+        <input type="checkbox" name="hobby" id="basketball" value="농구" >
+        <label for="basketball">농구</label>
+        <input type="checkbox" name="hobby" id="football" value="축구" >
+        <label for="football">축구</label><br>
+        <input type="checkbox" name="hobby" id="study" value="공부" >
+        <label for="study">공부</label>
+        <input type="checkbox" name="hobby" id="music" value="음악감상" >
+        <label for="music">음악감상</label> <br>
+        <input type="checkbox" name="something">
+        <label for="something">기타: </label><input type="somethin" name="something"><br><br>
+        <label>자기소개</label><br>
+        <textarea name="contents" id="" cols="80" rows="5"
+        style="resize:none"></textarea>
+    <br>
+  </table>
+  </fieldset>
+  <br>
+  <button>회원가입</button>&nbsp;<button type="reset">다시 입력</button>&nbsp;<button>이전으로</button>   
+  </form>
+</body>
+</html>

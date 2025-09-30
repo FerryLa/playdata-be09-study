@@ -1,0 +1,29 @@
+# build artifacts
+/build/
+/target/
+/out/
+/dist/
+/*.log
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Node
+/node_modules/
+
+# IDE
+/.idea/
+/.vscode/
+/*.iml
+
+# Tomcat installs & webapps(아래 경로는 너 케이스에 맞춤)
+other-study/lecture-server-hosting/installFiles/
+**/webapps/
+**/WEB-INF/classes/
+
+# OS
+.DS_Store
+Thumbs.db

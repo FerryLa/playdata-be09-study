@@ -1,0 +1,54 @@
+.tran1 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border: 1px solid black;
+    transition-duration: 2s;
+}
+
+.tran1:hover {
+    width: 200px;
+    background: yellow;
+}
+
+.tran2 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border: 1px solid black;
+    transition-property: background-color, transform, width, height; /* 필수는 아니다. */
+    transition-duration: 2s, 3s, 4s, 1s;
+}
+
+.tran2:hover {
+    width: 200px;
+    height: 200px;
+    background: yellow;
+    transform: rotateZ(180deg);
+}
+
+.tran3 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border: 1px solid black;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+.tran3:hover {
+    background: yellow;
+    transform: rotateZ(60deg);
+}
+
+.tran4 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border: 1px solid black;
+    transition-duration: 2s;
+    transition-delay: 2s;
+}
+.tran4:hover {
+    background: yellow;
+    transform: rotateZ(60deg);
+}
